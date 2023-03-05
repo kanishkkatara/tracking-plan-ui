@@ -42,8 +42,8 @@ function App() {
         rules: event.rules,
       })),
     };
-
-    fetch("http://localhost:3000/tracking-plan/", {
+    const url = 'http://localhost:3000/tracking-plan/';
+    fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

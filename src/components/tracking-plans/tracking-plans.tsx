@@ -19,7 +19,8 @@ const TrackingPlanList: React.FC = () => {
 
   useEffect(() => {
     const fetchTrackingPlans = async () => {
-      const response = await fetch('http://localhost:3000/tracking-plan/');
+      const url = 'http://localhost:3000/tracking-plan/';
+      const response = await fetch(url);
       const data = await response.json();
       setTrackingPlans(data);
     };
