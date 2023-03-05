@@ -17,6 +17,7 @@ function App() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [events, setEvents] = useState<Event[]>([]);
+  const [message, setMessage] = useState<string>("");
 
   const handleAddEvent = () => {
     setEvents([...events, { name: "", description: "", rules: "" }]);
@@ -53,11 +54,11 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);
-        // handle success response
+        setMessage("Tracking plan saved successfully");
       })
       .catch((error) => {
         console.error("Error:", error);
-        // handle error response
+        setMessage("Error saving tracking plan");
       });
   };
 
@@ -129,6 +130,7 @@ function App() {
           Save
         </button>
       </div>
+      {message && <p style={{ color: 'red' }}>{message}</p>}
     </div>
   );
 }
