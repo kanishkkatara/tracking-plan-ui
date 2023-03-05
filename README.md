@@ -1,6 +1,9 @@
 # Tracking Plan App
 This is a sample application for generating tracking plans and their associated events. It consists of a front-end React app and a back-end Node.js app.
 
+<img width="813" alt="image" src="https://user-images.githubusercontent.com/58228944/222961625-cfa409d3-63e6-4c3e-be1b-1f1f8fb9fc3d.png">
+
+
 ## Setting up the database
 The application uses PostgreSQL as its database. You can set up PostgreSQL locally or use a cloud-based service such as AWS RDS. Use the following configurations. 
 ```
